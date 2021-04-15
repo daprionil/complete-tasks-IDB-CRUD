@@ -1,1 +1,1 @@
-# complete-tasks-IDB-CRUD
+# Manage Tasks CRUD with IndexedDB
