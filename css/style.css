@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+.message {
+  position: fixed;
+  top: 1vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  -webkit-box-shadow: 0 0 4px #1f1f1f;
+          box-shadow: 0 0 4px #1f1f1f;
+}
+
+.message.correcto {
+  background: #0bc005;
+}
+
+.message.incorrecto {
+  background: #ac1212;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border: 1px solid #1f1f1f;
+  background: #1a1a1a;
+  color: #e6e6e6;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 5px;
+  font-family: "Lexend", sans-serif;
+}
+
+.btn:hover {
+  border: 1px solid #e6e6e6;
+}
+
+input[type="search"], input[type="text"] {
+  width: 100%;
+  border: 2px solid #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  color: white;
+  background: #1f1f1f;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  font-family: "Lexend", sans-serif;
+}
+
+input[type="search"]:focus, input[type="text"]:focus {
+  border: 2px solid #e6e6e6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  color: #e6e6e6;
+  font-family: 'Lexend',sans-serif;
+}
+
+body {
+  background: #0a0a0a;
+}
+
+body header {
+  background: #151515;
+}
+
+body header .ctn-menu {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body header .ctn-menu .ctn-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 10px;
+}
+
+body header .ctn-menu .ctn-title p {
+  border-right: 2px solid #1f1f1f;
+  padding-right: 5px;
+}
+
+body header .ctn-menu .ctn-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 10px;
+}
+
+body header .ctn-menu .ctn-form form .ctn-submit button {
+  background: #006eff;
+}
+
+body header .ctn-menu .ctn-form form .selects-condition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0 10px;
+}
+
+body header .ctn-menu .ctn-btn-menu .btnMenu {
+  display: none;
+}
+
+body main {
+  margin-bottom: 50px;
+}
+
+body main .ctn-title-add {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5rem;
+}
+
+body main .ctn-form-add-task {
+  border-bottom: 2px solid #1f1f1f;
+}
+
+body main .ctn-form-add-task form {
+  padding: 20px 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 40% 20%;
+      grid-template-columns: 40% 40% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0 10px;
+}
+
+body main .ctn-form-add-task form div button {
+  background: #006eff;
+}
+
+body main .ctn-form-add-task form div:nth-child(3) {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+body main .ctn-tasks {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+body main .ctn-tasks .table-tasks {
+  overflow-x: auto;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+body main .ctn-tasks .table-tasks table {
+  width: 100%;
+  background: #151515;
+  text-align: center;
+}
+
+body main .ctn-tasks .table-tasks table thead {
+  background: #1a1a1a;
+}
+
+body main .ctn-tasks .table-tasks table thead th {
+  padding: 15px;
+}
+
+body main .ctn-tasks .table-tasks table thead th:nth-child(1) {
+  width: 40%;
+}
+
+body main .ctn-tasks .table-tasks table thead th:nth-child(2) {
+  width: 40%;
+}
+
+body main .ctn-tasks .table-tasks table thead th:nth-child(3) {
+  width: 10%;
+}
+
+body main .ctn-tasks .table-tasks table thead th:nth-child(4) {
+  width: 10%;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td {
+  border-bottom: 2px solid #1f1f1f;
+  padding: 10px 3px;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(1) {
+  position: relative;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(1) p:nth-child(1) {
+  padding: 15px 0;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(1) p:nth-child(2) {
+  position: absolute;
+  bottom: 1px;
+  font-size: 0.8rem;
+  left: 1px;
+  background: #006eff;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(4) button {
+  margin: 3px;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(4) .btnDelete {
+  background: red;
+}
+
+body main .ctn-tasks .table-tasks table tbody tr td:nth-child(4) .btnEditar {
+  background: #006eff;
+}
+
+body footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  background: #1a1a1a;
+}
+
+body footer p {
+  padding: 15px;
+  text-align: center;
+}
+
+@media (max-width: 840px) {
+  body header .ctn-menu {
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'text btn' 'menu menu';
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header .ctn-menu .ctn-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  body header .ctn-menu .ctn-form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: menu;
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  body header .ctn-menu .ctn-form form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px;
+  }
+  body header .ctn-menu .ctn-form.active {
+    height: 100%;
+  }
+  body header .ctn-menu .ctn-btn-menu {
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: btn;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body header .ctn-menu .ctn-btn-menu .btnMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  body header .ctn-menu .ctn-form {
+    margin-top: 10px;
+  }
+  body header .ctn-menu .ctn-form form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 10px 0;
+    padding: 0;
+  }
+  body main .ctn-form-add-task form {
+        grid-template-areas: 'primero primero' 'segundo tercero';
+    gap: 10px;
+  }
+  body main .ctn-form-add-task form div {
+    width: 100%;
+  }
+  body main .ctn-form-add-task form div:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: primero;
+  }
+  body main .ctn-form-add-task form div:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: segundo;
+  }
+  body main .ctn-form-add-task form div:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: tercero;
+  }
+}
+
+@media (max-width: 840px) {
+  body header .ctn-menu {
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'text btn' 'menu menu';
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body header .ctn-menu .ctn-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text;
+  }
+  body header .ctn-menu .ctn-form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: menu;
+    overflow: hidden;
+    height: 0px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  body header .ctn-menu .ctn-form form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px;
+  }
+  body header .ctn-menu .ctn-form.active {
+    height: 100%;
+  }
+  body header .ctn-menu .ctn-btn-menu {
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: btn;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body header .ctn-menu .ctn-btn-menu .btnMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 414px) {
+  body main .ctn-form-add-task form {
+        grid-template-areas: 'primero primero' 'segundo segundo' 'tercero tercero';
+  }
+  body main .ctn-tasks .table-tasks table {
+    font-size: 0.6rem;
+  }
+  body main .ctn-tasks .table-tasks table tbody tr td:nth-child(1) p:nth-child(2) {
+    font-size: 0.5rem;
+  }
+  body main .ctn-tasks .table-tasks table tbody tr td:nth-child(4) button {
+    font-size: 0.6rem;
+  }
+  body footer {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+//Variables
+$colorBlack:rgb(10, 10, 10);
+$colorBlack2do:#151515;
+$colorBlack3ro:#1a1a1a;
+$colorBlack4to:#1f1f1f;
+$colorWhite:#e6e6e6;
+
+$tipoFuente:"Lexend",sans-serif;
+//Mixins
+//Global Class
+.message{
+    position: fixed;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0 0 4px $colorBlack4to;
+}
+.message.correcto{
+    background: rgb(11, 192, 5);
+}
+.message.incorrecto{
+    background: rgb(172, 18, 18);
+}
+.btn{
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid $colorBlack4to;
+    background: $colorBlack3ro;
+    color: $colorWhite;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+    font-family: $tipoFuente;
+    &:hover{
+        border: 1px solid $colorWhite;
+    }
+}
+input[type="search"],input[type="text"]{
+    width: 100%;
+    border: 2px solid $colorBlack4to;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    color: white;
+    background: $colorBlack4to;
+    transition: all .3s;
+    font-family:$tipoFuente;
+    &:focus{
+        border: 2px solid $colorWhite;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+html{
+    color: $colorWhite;
+    font-family: 'Lexend',sans-serif;
+}
+//Styles
+body{
+    background: $colorBlack;
+    header{
+        background: $colorBlack2do;
+        .ctn-menu{
+            padding: 25px;
+            display: flex;
+            justify-content: space-around;
+            .ctn-title{
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
+                p{
+                    border-right: 2px solid $colorBlack4to;
+                    padding-right: 5px;
+                }
+            }
+            .ctn-form{
+                form{
+                    display: flex;
+                    align-items: center;
+                    gap: 0 10px;
+                    .ctn-submit{
+                        button{
+                            background: rgb(0, 110, 255);
+                        }
+                    }
+                    .selects-condition{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0 10px;
+                    }
+                }
+            }
+            .ctn-btn-menu{
+                .btnMenu{
+                    display: none;
+                }
+            }
+            
+        }
+        
+    }
+    main{
+        margin-bottom:50px;
+        .ctn-title-add{
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.5rem;
+        }
+        .ctn-form-add-task{
+            border-bottom: 2px solid $colorBlack4to;
+            form{
+                padding: 20px 10px;
+                display: grid;
+                grid-template-columns: 40% 40% 20%;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0 10px;
+                div{
+                    button{
+                        background: rgb(0, 110, 255);
+                    }
+                    &:nth-child(3){
+                        justify-self: center;
+                    }
+                }
+            }
+        }
+        .ctn-tasks{
+            margin:0 auto;
+            max-width: 1500px;
+            .table-tasks{
+                overflow-x: auto;
+                padding: 15px;
+                margin:10px 0;
+                table{
+                    width: 100%;
+                    background: $colorBlack2do;
+                    text-align: center;
+                    thead{
+                        background: $colorBlack3ro;
+                        th{
+                            padding: 15px;
+                            &:nth-child(1){
+                                width: 40%;
+                            }
+                            &:nth-child(2){
+                                width: 40%;
+                            }
+                            &:nth-child(3){
+                                width: 10%;
+                            }
+                            &:nth-child(4){
+                                width: 10%;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                border-bottom: 2px solid $colorBlack4to;
+                                padding: 10px 3px;
+                                &:nth-child(1){
+                                    position: relative;
+                                    p{
+                                        &:nth-child(1){
+                                            padding: 15px 0;
+                                        }
+                                        &:nth-child(2){
+                                            position: absolute;
+                                            bottom: 1px;
+                                            font-size: 0.8rem;
+                                            left: 1px;
+                                            background:rgb(0, 110, 255);
+                                            border-radius: 10px;
+                                            padding: 2px 5px;
+                                        }
+                                    }
+                                }
+                                &:nth-child(4){
+                                    button{
+                                        margin: 3px;
+                                    }
+                                    .btnDelete{
+                                        background: red;
+                                    }
+                                    .btnEditar{
+                                        background: rgb(0, 110, 255);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        background: $colorBlack3ro;
+        p{
+            padding: 15px;
+            text-align: center;
+        }
+    }
+}
+//Media Queries
+@media (max-width:840px){
+    body{
+        header{
+            .ctn-menu{
+                padding: 25px;
+                display: grid;
+                grid-template-areas:'text btn'
+                                    'menu menu';
+                align-items: center;
+                .ctn-title{
+                    grid-area: text;
+                }
+                .ctn-form{
+                    grid-area: menu;
+                    overflow: hidden;
+                    height: 0px;
+                    transition: all .3s;
+                    form{
+                        justify-content: space-between;
+                        padding: 10px;
+                    }
+                }
+                .ctn-form.active{
+                    height: 100%;
+                }
+                .ctn-btn-menu{
+                    width: 100%;
+                    grid-area: btn;
+                    display: grid;
+                    justify-content: flex-end;
+                    .btnMenu{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px){
+    body{
+        header{
+            .ctn-menu{
+                .ctn-form{
+                    margin-top:10px;
+                    form{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 10px 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        main{
+            .ctn-form-add-task{
+                form{
+                    grid-template-areas:'primero primero'
+                                        'segundo tercero';
+                    gap: 10px;
+                    div{
+                        width: 100%;
+                        &:nth-child(1){
+                            grid-area: primero;
+                        }
+                        &:nth-child(2){
+                            grid-area: segundo;
+                        }
+                        &:nth-child(3){
+                            grid-area: tercero;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:840px){
+    body{
+        header{
+            .ctn-menu{
+                padding: 25px;
+                display: grid;
+                grid-template-areas:'text btn'
+                                    'menu menu';
+                align-items: center;
+                .ctn-title{
+                    grid-area: text;
+                }
+                .ctn-form{
+                    grid-area: menu;
+                    overflow: hidden;
+                    height: 0px;
+                    transition: all .3s;
+                    form{
+                        justify-content: space-between;
+                        padding: 10px;
+                    }
+                }
+                .ctn-form.active{
+                    height: 100%;
+                }
+                .ctn-btn-menu{
+                    width: 100%;
+                    grid-area: btn;
+                    display: grid;
+                    justify-content: flex-end;
+                    .btnMenu{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:414px){
+    body{
+        main{
+            .ctn-form-add-task{
+                form{
+                    grid-template-areas:'primero primero'
+                                        'segundo segundo'
+                                        'tercero tercero';
+                }
+            }
+            .ctn-tasks{
+                .table-tasks{
+                    table{
+                        font-size: 0.6rem;
+                        tbody{
+                            tr{
+                                td{
+                                    &:nth-child(1){
+                                        p{
+                                            &:nth-child(2){
+                                                font-size: 0.5rem;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4){
+                                        button{
+                                            font-size: 0.6rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            font-size: 0.7rem;
+        }
+    }
+}

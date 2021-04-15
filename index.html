@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Tasks - David B.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon-app-tasks.png" type="image/x-icon">
+</head>
+<body>
+    <div class="ctn-messages" id="messagesBox"></div>
+    <header>
+        <div class="ctn-menu">
+            <div class="ctn-title">
+                <p>JS TODO LIST</p>
+            </div>
+            <div class="ctn-btn-menu">
+                <button class="btn btnMenu" id="btnMenu">­­&equiv;</button>
+            </div>
+            <div class="ctn-form">
+                <form action="" id="formSeeker">
+                    <div class="ctn-seeker">
+                        <input type="search" name="seeker" id="seekerForm" placeholder="Buscar">
+                    </div>
+                    <div class="selects-condition">
+                        <div class="item-condition">
+                            <label for="all">Todos</label>
+                            <input type="radio" id="all" name="condition" value="all" checked>
+                        </div>
+                        <div class="item-condition">
+                            <label for="all">Incompletos</label>
+                            <input type="radio" id="incompleto" name="condition" value="incompleto">
+                        </div>
+                        <div class="item-condition">
+                            <label for="all">Completos</label>
+                            <input type="radio" id="completo" name="condition" value="completo">
+                        </div>
+                    </div>
+                    <div class="ctn-submit">
+                        <button type="submit" class="btn">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="ctn-title-add">
+            <p>¡Agrega una nueva Tarea!</p>
+        </div>
+        <div class="ctn-form-add-task">
+            <form action="" id="formAddTask" class="ctn-form">
+                <div class="title-task">
+                    <input type="text" name="title" id="titleTask" placeholder="Titulo">
+                </div>
+                <div class="desc-task">
+                    <input type="text" name="descTask" id="descTask" placeholder="Descripción">
+                </div>
+                <div class="btn-submit-add">
+                    <button name="btn" type="submit" class="btn">Agregar</button>
+                </div>
+            </form>
+        </div>
+        <div class="ctn-tasks">
+            <div class="table-tasks">
+                <p>Tabla de Tareas</p>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripción</th>
+                            <th>Completado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="boxTableTasks"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;Todos Los Derechos Reservados<span></span></p>
+    </footer>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
