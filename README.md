@@ -1,1 +1,1 @@
-# Manage Tasks CRUD with IndexedDB
+# 📝 Manage Tasks CRUD with IndexedDB 📝
